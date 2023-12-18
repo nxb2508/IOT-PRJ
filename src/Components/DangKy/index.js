@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import app from './firebaseConfig';
 import { getDatabase, ref, set, onValue } from "firebase/database";
-
+import Button from '@mui/material/Button';
 function DangKy() {
     // Push Function
     const [number, setNumber] = useState('');
@@ -39,7 +39,7 @@ function DangKy() {
                     Enter id:
                     <input className='border-solid border-2 border-indigo-600 rounded-lg ml-[10px] mr-[10px]' type="number" value={number} onChange={handleNumberChange} />
                 </label>
-                <button type="submit">Send To Sensor</button>
+                <Button variant="contained" type="submit">Send To Sensor</Button>
             </form>
         </div>
     );
